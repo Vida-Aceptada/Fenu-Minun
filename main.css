@@ -1,0 +1,370 @@
+html {
+	font-size: 16px;
+}
+
+body {
+	background-color: #000;
+	text-align: center;
+	color: #fff;
+	font-family: "Century Gothic", monospace;
+	margin: 0rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Headers */
+h1, h1 a {
+	color: aqua;
+	font-size: 5rem;
+	letter-spacing: 0.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+nav {
+	border-top: 0.08rem solid #fff;
+	border-bottom: 0.08rem solid #fff;
+}
+
+
+/* Navigation */
+nav > ul > li {
+	display: inline-block;
+	font-size: 2rem;
+	margin: 0rem 6rem;
+}
+
+nav > ul > li > a {
+	color: #fff;
+	transition: all 0.5s;
+}
+
+nav > ul > li > a:hover {
+	text-shadow: 0 0 0.1rem #fff;
+	transition: all 0.5s;
+}
+
+/* Sections */
+section article {
+	text-align: center;
+}
+
+#ABOUT {
+	display: block;
+	margin-top: 6rem;
+}
+
+#ABOUT p {
+	font-size: 1.5rem;
+}
+
+.main {
+	display: none;
+}
+
+#CONTACT article {
+	text-align: left;
+	padding: 5rem 22rem;
+	font-size: 2.25rem;
+	color: #cff;
+}
+
+#CONTACT article p {
+	margin: 1rem;
+}
+
+#CONTACT article a {
+	color: #fff;
+}
+
+footer {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 0.75rem;
+	color: #999;
+}
+
+/* Buttons */
+article h3 {
+	display: inline-block;
+	padding: 1rem;
+	margin: 4rem 4rem 0rem 4rem;
+	background-color: teal;
+	border-radius: 0.5rem;
+	border: .08rem solid #fff;
+	width: 20rem;
+}
+
+article h3 a {
+	color: #fff;
+	padding: 0rem;
+	margin: 0rem;
+}
+
+input[name="search"] {
+	color: cyan;
+	font-size: 1.5rem;
+	background-color: darkslategray;
+	border: .08rem solid aqua;
+	border-radius: .32rem;
+	margin: 0;
+	padding: 0.125rem 0.5rem 0.375rem 0.5rem;
+	line-height: 1.5rem;
+	vertical-align: top;
+}
+
+input[name="search"]:hover {
+	cursor: pointer;
+}
+
+/* Text Boxes */
+textarea[name='song search'], textarea[name='artist search'] {
+	margin: 0;
+	font-size: 2rem;
+	line-height: 2rem;
+	padding: 0rem 1rem;
+	resize: none;
+	overflow: hidden;
+	border-radius: 0.5rem;
+	color: darkcyan;
+}
+
+textarea[name='song search'] {
+	width: 24rem;
+}
+
+textarea[name='artist search'] {
+	width: 18rem;
+}
+
+textarea[name="bot input"] {
+	width: 34rem;
+	height: 5rem;
+	resize: none;
+	border-bottom-left-radius: 0.5rem;
+	background-color: #000;
+	color: aqua;
+	font-family: "Century Gothic", monospace;
+	padding: .64rem;
+	border: 0.08rem solid aqua;
+	margin: 0;
+	display: inline-block;
+}
+
+textarea[name="bot input"]:focus {
+	box-shadow: inset 0rem 0rem 0.08rem 0.08rem darkslategray;
+}
+
+/* Display */
+
+#SONG_RESULT, #LYRICS_RESULT {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+#SONG_RESULT {
+	height: 2rem;
+}
+
+#LYRICS_RESULT {
+	white-space: pre-line;
+	height:16rem;
+	width: 80%;
+	overflow: auto;
+	margin: auto;
+	font-size: 1.5rem;
+	border: 0.08rem solid #fff;
+	padding: 1rem;
+}
+
+#YTLINK {
+	font-size: 2rem;
+	color: aqua;
+	font-weight: bolder;
+}
+
+#CHAT_DISPLAY {
+	height: 18rem;
+	width: 41.12rem;
+	color: aqua;
+	font-family: "Century Gothic", monospace;
+	padding: 0rem 0rem .64rem 0rem;
+	border: 0.08rem solid aqua;
+	border-bottom: none;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	margin: auto;
+	background-color: darkslategrey;
+}
+
+#CHAT_TIME {
+	border-bottom: 0.08rem solid aqua;
+	padding: 0.5rem;
+	background-color: #000;
+	border-top-right-radius: 0.5rem;
+	border-top-left-radius: 0.5rem;
+}
+
+#MESSAGES {
+	height: 83%;
+	overflow: auto;
+	padding: .64rem;
+}
+
+#MESSAGES > p {
+	font-size: 0.8rem;
+	color: #fff;
+	opacity: 0.75;
+}
+
+#MESSAGES div {
+	float: left;
+	clear: left;
+	background-color: #000;
+	border: 0.08rem solid slategrey;
+	border-radius: 0.5rem;
+	width: 50%;
+	min-height: 2rem;
+	text-align: left;
+	padding: 1rem;
+	margin: 1rem 0rem;
+}
+
+#MESSAGES div p {
+	float: right;
+	width: 80%;
+	margin-top: 0rem;
+}
+
+#MESSAGES div.botMessage {
+	float: right;
+	clear: right;
+	background-color: #fff;
+	color: black;
+}
+
+#MESSAGES div img {
+	width: 3rem;
+	height: 3rem;
+	float: left;
+	border-radius: 0.25rem;
+}
+
+#MESSAGES div span {
+	clear: both;
+	display: block;
+	text-align: right;
+	color: slategray;
+	font-size: 0.75rem;
+}
+
+#BOT_INPUT {
+	font-size: 0rem;
+}
+
+#CHAT_OPTIONS {
+	width: 4.56rem;
+	display: inline-block;
+	padding: .64rem;
+	border: 0.08rem solid aqua;
+	border-left: none;
+	border-bottom-right-radius: 0.5rem;
+	height: 5rem;
+	vertical-align: top;
+	margin: 0;
+}
+
+#CHAT_OPTIONS input, #OPTIONS_MODIFIER input {
+	padding: .16rem;
+	width: 4.5rem;
+	color: cyan;
+	background-color: darkslategray;
+	border: .08rem solid aqua;
+	border-radius: .32rem;
+	margin: 0rem 0rem 0.24rem 0rem
+}
+
+#CHAT_OPTIONS input:hover, #OPTIONS_MODIFIER input:hover {
+	cursor: pointer;
+	background-color: slategray;
+	color: #fff;
+}
+
+#OPTIONS_WINDOW {
+	position: absolute;
+	z-index: 1;
+	top: 40%;
+	left: 40%;
+	border: 0.08rem solid aqua;
+	border-radius: 0.5rem;
+	background-color: #000;
+	padding: 1rem;
+	box-shadow: 0.16rem 0.32rem 0.16rem 0.16rem #000;
+	display: none;
+}
+
+#CHAT_COLORS {
+	text-align: left;
+	height: 10rem;
+	width: 20rem;
+	display: none;
+}
+
+#CHAT_COLORS span {
+	float: left;
+	clear: left;
+	margin-bottom: .5rem;
+	color: aqua;
+}
+
+#CHAT_COLORS input {
+	float: right;
+	clear: right;
+	margin-bottom: .5rem;
+	padding: .16rem;
+	width: 1.5rem;
+	border-radius: .32rem;
+}
+
+#CHAT_COLORS input:hover {
+	cursor: pointer;
+}
+
+#USERNAME {
+	display: none
+}
+
+#USERNAME textarea {
+	resize: none;
+	height: 1rem;
+	font-size: 1rem;
+	line-height: 1rem;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	margin: 2rem 0rem;
+	color: darkcyan;
+	font-weight: bolder;
+	overflow: hidden;
+}
+
+#HELP {
+	text-align: left;
+	width: 20rem;
+	height: 15rem;
+	overflow-y: auto;
+}
+
+#OPTIONS_MODIFIER {
+	clear: both;
+}
+
+#DRAG_BAR {
+	height: 1rem;
+	width: 100%;
+	cursor: move;
+}

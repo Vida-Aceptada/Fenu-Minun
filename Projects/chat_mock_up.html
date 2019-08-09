@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../main.css" rel="stylesheet">
+		<script src="../main.js"></script>
+		<script src="../JS/chat_mock_up.js"></script>
+		<meta charset='UTF-8'>
+		<title>Chat Mock-Up</title>
+	</head>
+	<body>
+		<h1><a href="../index.html">Fenu Minun</a></h1>
+		<div id="CHAT_DISPLAY" class="mainBackground borders textColor">
+			<div id="CHAT_TIME" class="secondaryBackground borders"></div>
+			<div id="MESSAGES">
+				<div class="botMessage">
+					Welcome! Click the bottom left corner box to type into the chat and start a conversation with the chatbot. If you need more information click on the "Help" button.
+				</div>
+			</div>
+		</div>
+		<div id="BOT_INPUT">
+			<textarea name="bot input" class="borders secondaryBackground textColor"></textarea>
+			<div id="CHAT_OPTIONS" class="borders secondaryBackground">
+				<input name="username" type="button" value="Username" onclick="displayOptions('USERNAME');" class="mainBackground borders textColor">
+				<input name="colors" type="button" value="Colors" onclick="displayOptions('CHAT_COLORS');" class="mainBackground borders textColor">
+				<input name="help" type="button" value="Help" onclick="displayOptions('HELP');" class="mainBackground borders textColor">
+			</div>
+		</div>
+		<div id="OPTIONS_WINDOW" class="borders secondaryBackground">
+			<div id="DRAG_BAR"></div>
+			<div id="CHAT_COLORS" class="options">
+				<span class="textColor">Border Color:</span><input name="chat borders" type="color" value="#00FFFF"><br>
+				<span class="textColor">Main Background:</span><input name="main background" type="color" value="#2F4F4F"><br>
+				<span class="textColor">Secondary Background:</span><input name="secondary background" type="color" value="#000000"><br>
+				<span class="textColor">Text Color:</span><input name="text color" type="color" value="#00FFFF">
+			</div>
+			<div id="USERNAME" class="options">
+				<textarea name="username" maxlength="20" placeholder="Enter a username"></textarea><br>
+			</div>
+			<div id="HELP" class="options">
+				<h3>Help</h3>
+				<h4>Using the chat:</h4>
+				<p>
+					To use the chat simply click on the bottom left text box and type in using your keyboard. You should recieve replies from the chat bot.
+				</p>
+				<h4>Adding a Username:</h4>
+				<p>
+					To change your username click on the "Username" button on the bottom right corner of the chat. Then type in your desired username into the text box and click the save button.
+				</p>
+				<p>
+					The username length is limited to 1-20 characters.
+				</p>
+				<h4>Customizing Chat Colors:</h4>
+				<p>
+					To customize the chat colors click on the "Colors" button on the bottom right corner of the chat.
+				</p>
+				<p>
+					You should see different properties that are customizable. You can tweak each one to your liking by clicking on the colored box to the right of each which will bring up a color selection toolbox.
+				</p>
+				<p>
+					To change each color select or enter the desired color and click "OK". When you are finished click save to apply the changes.
+				</p>
+			</div>
+			<div id="OPTIONS_MODIFIER">
+				<input type="button" name="save" value="Save" onclick="applyOptions();" class="mainBackground borders textColor">
+				<input type="button" name="close" value="Close" onclick="hideOptions();" class="mainBackground borders textColor">
+			</div>
+		</div>
+		<footer>
+			© 2019 Fenu Minun. All rights reserved.
+		</footer>
+	</body>
+</html>
