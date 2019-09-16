@@ -93,11 +93,16 @@ footer {
 article h3 {
 	display: inline-block;
 	padding: 1rem;
-	margin: 4rem 4rem 0rem 4rem;
-	background-color: teal;
+	margin: 2rem 1rem 0rem 1rem;
+	background-color: #000;
 	border-radius: 0.5rem;
-	border: .08rem solid #fff;
-	width: 20rem;
+	border: .08rem solid teal;
+	width: 18rem;
+}
+
+article h3 img {
+	display: block;
+	margin: auto;
 }
 
 article h3 a {
