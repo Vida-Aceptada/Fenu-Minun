@@ -98,6 +98,13 @@ article h3 {
 	border-radius: 0.5rem;
 	border: .08rem solid teal;
 	width: 18rem;
+	transition-duration: 0.5s;
+}
+
+article h3:hover {
+	background-color: #2ac;
+	opacity: 0.85;
+	transition-duration: 0.5s;
 }
 
 article h3 img {
