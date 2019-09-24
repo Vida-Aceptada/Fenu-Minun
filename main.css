@@ -200,7 +200,7 @@ article h3 a {
 	}
 	
 	article h3 {
-		padding: 5rem 1rem;
+		padding: 5rem 0rem;
 		margin: 1rem auto;
 	}
 	
@@ -210,7 +210,8 @@ article h3 a {
 	
 	#PROJECTS article {
 		grid-template:
-			"a a" "b b";
+			"a a"
+			"b b";
 	}
 	
 	#PROJECTS h3:last-child {
