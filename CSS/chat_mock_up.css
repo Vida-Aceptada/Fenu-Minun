@@ -1,0 +1,202 @@
+/* Text Boxes */
+
+textarea[name="bot input"] {
+	width: 34rem;
+	height: 5rem;
+	resize: none;
+	border-bottom-left-radius: 0.5rem;
+	background-color: #000;
+	color: aqua;
+	font-family: "Century Gothic", monospace;
+	padding: .64rem;
+	border: 0.08rem solid aqua;
+	margin: 0;
+	display: inline-block;
+}
+
+textarea[name="bot input"]:focus {
+	box-shadow: inset 0rem 0rem 0.08rem 0.08rem darkslategray;
+}
+
+/* Display */
+
+#CHAT_DISPLAY {
+	height: 18rem;
+	width: 41.12rem;
+	color: aqua;
+	font-family: "Century Gothic", monospace;
+	padding: 0rem 0rem .64rem 0rem;
+	border: 0.08rem solid aqua;
+	border-bottom: none;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	margin: auto;
+	background-color: darkslategrey;
+}
+
+#CHAT_TIME {
+	border-bottom: 0.08rem solid aqua;
+	padding: 0.5rem;
+	background-color: #000;
+	border-top-right-radius: 0.5rem;
+	border-top-left-radius: 0.5rem;
+}
+
+#MESSAGES {
+	height: 83%;
+	overflow: auto;
+	padding: .64rem;
+}
+
+#MESSAGES > p {
+	font-size: 0.8rem;
+	color: #fff;
+	opacity: 0.75;
+}
+
+#MESSAGES div {
+	float: left;
+	clear: left;
+	background-color: #000;
+	border: 0.08rem solid slategrey;
+	border-radius: 0.5rem;
+	width: 50%;
+	min-height: 2rem;
+	text-align: left;
+	padding: 1rem;
+	margin: 1rem 0rem;
+}
+
+#MESSAGES div p {
+	float: right;
+	width: 80%;
+	margin-top: 0rem;
+}
+
+#MESSAGES div.botMessage {
+	float: right;
+	clear: right;
+	background-color: #fff;
+	color: black;
+}
+
+#MESSAGES div img {
+	width: 3rem;
+	height: 3rem;
+	float: left;
+	border-radius: 0.25rem;
+}
+
+#MESSAGES div span {
+	clear: both;
+	display: block;
+	text-align: right;
+	color: slategray;
+	font-size: 0.75rem;
+}
+
+#BOT_INPUT {
+	font-size: 0rem;
+}
+
+#CHAT_OPTIONS {
+	width: 4.56rem;
+	display: inline-block;
+	padding: .64rem;
+	border: 0.08rem solid aqua;
+	border-left: none;
+	border-bottom-right-radius: 0.5rem;
+	height: 5rem;
+	vertical-align: top;
+	margin: 0;
+}
+
+#CHAT_OPTIONS input, #OPTIONS_MODIFIER input {
+	padding: .16rem;
+	width: 4.5rem;
+	color: cyan;
+	background-color: darkslategray;
+	border: .08rem solid aqua;
+	border-radius: .32rem;
+	margin: 0rem 0rem 0.24rem 0rem
+}
+
+#CHAT_OPTIONS input:hover, #OPTIONS_MODIFIER input:hover {
+	cursor: pointer;
+	background-color: slategray;
+	color: #fff;
+}
+
+#OPTIONS_WINDOW {
+	position: absolute;
+	z-index: 1;
+	top: 40%;
+	left: 40%;
+	border: 0.08rem solid aqua;
+	border-radius: 0.5rem;
+	background-color: #000;
+	padding: 1rem;
+	box-shadow: 0.16rem 0.32rem 0.16rem 0.16rem #000;
+	display: none;
+}
+
+#CHAT_COLORS {
+	text-align: left;
+	height: 10rem;
+	width: 20rem;
+	display: none;
+}
+
+#CHAT_COLORS span {
+	float: left;
+	clear: left;
+	margin-bottom: .5rem;
+	color: aqua;
+}
+
+#CHAT_COLORS input {
+	float: right;
+	clear: right;
+	margin-bottom: .5rem;
+	padding: .16rem;
+	width: 1.5rem;
+	border-radius: .32rem;
+}
+
+#CHAT_COLORS input:hover {
+	cursor: pointer;
+}
+
+#USERNAME {
+	display: none
+}
+
+#USERNAME textarea {
+	resize: none;
+	height: 1rem;
+	font-size: 1rem;
+	line-height: 1rem;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	margin: 2rem 0rem;
+	color: darkcyan;
+	font-weight: bolder;
+	overflow: hidden;
+}
+
+#HELP {
+	text-align: left;
+	width: 20rem;
+	height: 15rem;
+	overflow-y: auto;
+}
+
+#OPTIONS_MODIFIER {
+	clear: both;
+}
+
+#DRAG_BAR {
+	height: 1rem;
+	width: 100%;
+	cursor: move;
+}

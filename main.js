@@ -6,35 +6,38 @@ const request = new XMLHttpRequest();
 let targetEl;
 
 window.addEventListener('DOMContentLoaded', () => {
-	targetEl = document.getElementById('ABOUT');
+	targetEl = document.getElementById('ABOUT'); // select the current visible pseudo page
 });
 
 function sectionToggle(section) {
-	targetEl.style.opacity = "1";
-	let el2 = document.getElementById(section);
-	el2.style.opacity = "0";
-	let startOpacity = 1;
-	let setEl = targetEl;
-	let counter = -1;
-	let reverse = true;
-	let fade = setInterval(() => {
-		startOpacity += counter/10;
-		setEl.style.opacity = startOpacity.toString();
-		console.log(startOpacity);
-		if (reverse && startOpacity < 0) {
-			counter = 1;
-			reverse = false;
-			targetEl.style.display = 'none';
-			el2.style.display = 'block';
-			setEl = el2;
-			console.log('Complete');
-		}
-		else if (startOpacity > 1) {
-			clearInterval(fade);
-			targetEl = el2;
-		}
-	}, 10); // the speed of the fade is set here
+	targetEl.style.opacity = "1"; // give current pseudo page an opacity value in case it's missing
+	let el2 = document.getElementById(section); // select the new pseudo page we want to make visible
+	if (targetEl != el2) { // allow the toggle animation only if we're navigating to a different pseudo page
+		el2.style.opacity = "0"; // give new pseudo page an opacity value in case it's missing
+		let startOpacity = 1;
+		let setEl = targetEl;
+		let counter = -1;
+		let reverse = true;
+		let fade = setInterval(() => {
+			startOpacity += counter/10;
+			setEl.style.opacity = startOpacity.toString();
+			console.log(startOpacity);
+			if (reverse && startOpacity < 0) {
+				counter = 1;
+				reverse = false;
+				targetEl.style.display = 'none';
+				el2.style.display = 'block';
+				setEl = el2;
+				console.log('Complete');
+			}
+			else if (startOpacity > 1) {
+				clearInterval(fade);
+				targetEl = el2;
+			}
+		}, 10); // the speed of the fade is set here
+	}
 }
+	
 
 function dragElement(elmnt) {
 	let pos1 = 0,
