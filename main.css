@@ -8,6 +8,7 @@ body {
 	color: #fff;
 	font-family: "Century Gothic", monospace;
 	margin: 0rem;
+	overflow-y: scroll;
 }
 
 a {
@@ -50,16 +51,28 @@ nav > ul > li > a:hover {
 
 /* Sections */
 section article {
-	text-align: center;
+	text-align: left;
 }
 
 #ABOUT {
 	display: block;
-	margin-top: 6rem;
+	margin-top: 5rem;
+}
+
+#ABOUT article {
+	padding: 0 20rem;
 }
 
 #ABOUT p {
 	font-size: 1.5rem;
+}
+
+#PROJECTS article {
+	text-align: center;
+	display: grid;
+	grid-template:
+		"a a a"
+		"b b b";
 }
 
 .main {
@@ -67,7 +80,6 @@ section article {
 }
 
 #CONTACT article {
-	text-align: left;
 	padding: 5rem 22rem;
 	font-size: 2.25rem;
 	color: #cff;
@@ -82,18 +94,24 @@ section article {
 }
 
 footer {
-	position: absolute;
-	bottom: 1rem;
-	right: 1rem;
+	position: fixed;
+	bottom: 0;
+	right: 0;
 	font-size: 0.75rem;
-	color: #999;
+	background-color: #111;
+	color: #fff;
+	padding: 0.25rem 1rem;
+	text-align: right;
+	border-top: 0.08rem solid #fff;
+	border-top: 0.08rem solid #fff;
+	border-left: 0.08rem solid #fff;
+	border-top-left-radius: 1rem;
 }
 
 /* Buttons */
 article h3 {
-	display: inline-block;
 	padding: 1rem;
-	margin: 2rem 1rem 0rem 1rem;
+	margin: 2rem auto;
 	background-color: #000;
 	border-radius: 0.5rem;
 	border: .08rem solid teal;
