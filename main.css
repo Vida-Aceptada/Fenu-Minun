@@ -209,7 +209,8 @@ article h3 a {
 	}
 	
 	#PROJECTS article {
-		grid-template: "a a" "b b";
+		grid-template:
+			"a a" "b b";
 	}
 	
 	#PROJECTS h3:last-child {
