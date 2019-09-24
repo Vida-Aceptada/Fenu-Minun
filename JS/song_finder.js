@@ -11,7 +11,7 @@ function songSearch(song, artist) {
   let Url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${query}&key=AIzaSyD2YxCsNqQyeitu8PIhewyDF9ZabhuZevc`;
   fetch(Url)
   .then(res => {return res.json();})
-  .then(json => {document.getElementById('SONG_RESULT').innerHTML = `<a id="YTLINK" href="https://youtu.be/${json.items[0].id.videoId}" target="_blank">Youtube</a>`;});
+  .then(json => {document.getElementById('SONG_RESULT').innerHTML = `<a id="YTLINK" href="https://youtu.be/${json.items[0].id.videoId}" target="_blank">Lyrics</a>`;});
   
   request.open('GET', `https://api.lyrics.ovh/v1/${artist}/${song}`);
 

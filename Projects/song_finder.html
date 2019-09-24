@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link href="../main.css" rel="stylesheet">
+		<link href="../CSS/song_finder.css" rel="stylesheet">
 		<script src="../main.js"></script>
 		<script src="../JS/song_finder.js"></script>
 		<meta charset='UTF-8'>
@@ -9,12 +10,14 @@
 	</head>
 	<body>
 		<h1><a href="../index.html">Fenu Minun</a></h1>
-		<textarea name="song search" rows='1' wrap='off' placeholder="Song"></textarea>
-		<textarea name="artist search" rows='1' wrap='off' placeholder="Artist"></textarea>
-		<input type='button' value="Search" name="search" onclick="checkParameters();">
-		<section>
-			<div id="SONG_RESULT"><a id="YTLINK" href="https://youtu.be" target="_blank" rel="noopener">Youtube</a></div>
-			<div id="LYRICS_RESULT">Lyrics</div>
+		<section id="SONG_FINDER">
+			<textarea name="song search" rows='1' wrap='off' placeholder="Song"></textarea>
+			<textarea name="artist search" rows='1' wrap='off' placeholder="Artist"></textarea>
+			<input type='button' value="Search" name="search" onclick="checkParameters();">
+			<div id="SONG_RESULT"><a id="YTLINK" href="https://youtu.be" target="_blank" rel="noopener">Lyrics</a></div>
+		</section>
+		<section id="LYRICS">
+			<div id="LYRICS_RESULT"></div>
 		</section>
 		<footer>
 			© 2019 Fenu Minun. All rights reserved.
