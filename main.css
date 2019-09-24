@@ -136,41 +136,7 @@ article h3 a {
 	margin: 0rem;
 }
 
-input[name="search"] {
-	color: cyan;
-	font-size: 1.5rem;
-	background-color: darkslategray;
-	border: .08rem solid aqua;
-	border-radius: .32rem;
-	margin: 0;
-	padding: 0.125rem 0.5rem 0.375rem 0.5rem;
-	line-height: 1.5rem;
-	vertical-align: top;
-}
-
-input[name="search"]:hover {
-	cursor: pointer;
-}
-
 /* Text Boxes */
-textarea[name='song search'], textarea[name='artist search'] {
-	margin: 0;
-	font-size: 2rem;
-	line-height: 2rem;
-	padding: 0rem 1rem;
-	resize: none;
-	overflow: hidden;
-	border-radius: 0.5rem;
-	color: darkcyan;
-}
-
-textarea[name='song search'] {
-	width: 24rem;
-}
-
-textarea[name='artist search'] {
-	width: 18rem;
-}
 
 textarea[name="bot input"] {
 	width: 34rem;
@@ -191,32 +157,6 @@ textarea[name="bot input"]:focus {
 }
 
 /* Display */
-
-#SONG_RESULT, #LYRICS_RESULT {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-
-#SONG_RESULT {
-	height: 2rem;
-}
-
-#LYRICS_RESULT {
-	white-space: pre-line;
-	height:16rem;
-	width: 80%;
-	overflow: auto;
-	margin: auto;
-	font-size: 1.5rem;
-	border: 0.08rem solid #fff;
-	padding: 1rem;
-}
-
-#YTLINK {
-	font-size: 2rem;
-	color: aqua;
-	font-weight: bolder;
-}
 
 #CHAT_DISPLAY {
 	height: 18rem;
