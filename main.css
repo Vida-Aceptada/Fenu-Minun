@@ -15,6 +15,22 @@ a {
 	text-decoration: none;
 }
 
+#HOMEPAGE_LINK {
+	position: fixed;
+	bottom: 4rem;
+	right: 4rem;
+	font-size: 1rem;
+	color: #fff;
+	opacity: 0.5;
+	transition: all 0.5s;
+}
+
+#HOMEPAGE_LINK:hover {
+	color: aqua;
+	opacity: 1;
+	transition: all 0.5s;
+}
+
 /* Headers */
 h1, h1 a {
 	color: aqua;
@@ -27,6 +43,7 @@ h3 {
 }
 
 nav {
+	background-color: #333;
 	border-top: 0.08rem solid #fff;
 	border-bottom: 0.08rem solid #fff;
 }
@@ -114,7 +131,7 @@ article h3 {
 	margin: 2rem auto;
 	background-color: #000;
 	border-radius: 0.5rem;
-	border: .08rem solid teal;
+	border: .08rem solid #fff;
 	width: 18rem;
 	transition-duration: 0.5s;
 }
