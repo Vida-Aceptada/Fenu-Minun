@@ -41,11 +41,11 @@ textarea[name='song search'], textarea[name='artist search'] {
 }
 
 textarea[name='song search'] {
-	width: 24rem;
+	width: 22rem;
 }
 
 textarea[name='artist search'] {
-	width: 18rem;
+	width: 22rem;
 }
 
 /* Display */
@@ -56,7 +56,7 @@ textarea[name='artist search'] {
 	position: fixed;
 	width: 100%;
 	top: 12.75rem;
-	background-color: #333;
+	background-color: #222;
 	box-shadow: 0 0 1rem 1rem #000;
 }
 
