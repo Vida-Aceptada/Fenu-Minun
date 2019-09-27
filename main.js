@@ -34,7 +34,7 @@ function sectionToggle(section) {
 				clearInterval(fade);
 				targetEl = el2;
 			}
-		}, 10); // the speed of the fade is set here
+		}, 30); // the speed of the fade is set here
 	}
 }
 	
