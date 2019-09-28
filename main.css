@@ -183,10 +183,11 @@ article h3 a {
 
 /* Smaller Mobile Devices */
 @media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-width: 812px) {
-	h1 {
+	h1, h1 a {
 		color: aqua;
 		font-size: 1.5rem;
 		letter-spacing: 0.5rem;
+		text-shadow: 0 0 0.05rem aqua, 0 0 0.1rem #666, 0 0 0.05rem #000;
 	}
 	
 	nav > ul {
