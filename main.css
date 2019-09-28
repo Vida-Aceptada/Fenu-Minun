@@ -33,9 +33,14 @@ a {
 
 /* Headers */
 h1, h1 a {
+	background-color: #000;
+	background-image: url('Images/beanstalk-dark.png'); /* Background pattern from Toptal Subtle Patterns */
+	margin: 0;
+	padding: 3.35rem 0;
 	color: aqua;
 	font-size: 5rem;
 	letter-spacing: 0.5rem;
+	text-shadow: 0 0 0.1rem aqua, 0 0 0.25rem #666, 0 0 0.1rem #000;
 }
 
 h3 {

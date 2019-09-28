@@ -1,5 +1,3 @@
-// JS
-
 let heartImage = new Image(100, 100);
 heartImage.src = '../Images/Card Game/card flip life.png';
 

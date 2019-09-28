@@ -57,7 +57,7 @@ textarea[name='artist search'] {
 	width: 100%;
 	top: 12.75rem;
 	background-color: #222;
-	box-shadow: 0 0 1rem 1rem #000;
+	box-shadow: 0 1rem 1rem 1rem #000;
 }
 
 #SONG_RESULT, #LYRICS_RESULT {
