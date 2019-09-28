@@ -7,16 +7,20 @@ h1, h1 a {
 	background: none;
 }
 
+input {
+	font-family: 'Share Tech Mono', 'Century Gothic', monospace;
+}
+
 /* Text Boxes */
 
 textarea[name="bot input"] {
-	width: 34rem;
+	width: 33.9rem;
 	height: 5rem;
 	resize: none;
 	border-bottom-left-radius: 0.5rem;
 	background-color: #000;
 	color: aqua;
-	font-family: "Century Gothic", monospace;
+	font-family: 'Share Tech Mono', 'Century Gothic', monospace;
 	padding: .64rem;
 	border: 0.08rem solid aqua;
 	margin: 0;
@@ -33,7 +37,7 @@ textarea[name="bot input"]:focus {
 	height: 18rem;
 	width: 41.12rem;
 	color: aqua;
-	font-family: "Century Gothic", monospace;
+	font-family: 'Share Tech Mono', 'Century Gothic', monospace;
 	padding: 0rem 0rem .64rem 0rem;
 	border: 0.08rem solid aqua;
 	border-bottom: none;
@@ -109,6 +113,7 @@ textarea[name="bot input"]:focus {
 }
 
 #CHAT_OPTIONS {
+	background-color: #000;
 	width: 4.56rem;
 	display: inline-block;
 	padding: .64rem;

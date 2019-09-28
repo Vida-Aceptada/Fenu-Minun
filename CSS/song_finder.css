@@ -21,6 +21,7 @@ input[name="search"] {
 	padding: 0.125rem 0.5rem 0.375rem 0.5rem;
 	line-height: 1.5rem;
 	vertical-align: top;
+	font-family: 'Share Tech Mono', 'Century Gothic', monospace;
 }
 
 input[name="search"]:hover {
@@ -38,6 +39,7 @@ textarea[name='song search'], textarea[name='artist search'] {
 	overflow: hidden;
 	border-radius: 0.5rem;
 	color: darkcyan;
+	font-family: 'Share Tech Mono', 'Century Gothic', monospace;
 }
 
 textarea[name='song search'] {
@@ -55,7 +57,7 @@ textarea[name='artist search'] {
 	padding-top: 1rem;
 	position: fixed;
 	width: 100%;
-	top: 12.75rem;
+	top: 12rem;
 	background-color: #222;
 	box-shadow: 0 1rem 1rem 1rem #000;
 }
