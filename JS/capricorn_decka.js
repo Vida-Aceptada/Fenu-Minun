@@ -147,7 +147,7 @@ function matchCard(xPos, yPos, card) {
 					}, 1000);
 					game.cardRevealed = false;
 					context.clearRect( 400, 8, 50, 40);
-					context.font = '40px monospace';
+					context.font = "40px monospace";
 					context.fillStyle = '#008B8B';
 					context.fillText(game.attempts, 400, 48);
 				}
@@ -170,7 +170,7 @@ function startGame() {
 	setCards();
 	cardShuffle();
 	game.attempts = game.difficulty[`level ${game.level}`].get('limit');
-	context.font = "40px 'Share Tech Mono', 'Century Gothic', monospace";
+	context.font = "40px monospace";
 	context.fillStyle = '#008B8B';
 	context.fillText(game.attempts, 400, 48);
 	context.drawImage(heartImage, 370, 20, 30, 30);
@@ -185,7 +185,7 @@ function scoreScreen() {
 	context.fillStyle = '#000';
 	context.clearRect( 0, 0, 800, 640);
 	context.fillRect( 0, 0, 800, 640);
-	context.font = "40px 'Share Tech Mono', 'Century Gothic', monospace";
+	context.font = "40px monospace";
 	context.fillStyle = '#fff';
 	context.fillText(`Level Score: ${game.levelScore}`, 200, 260);
 	context.fillText(`Total Score: ${game.totalScore}`, 200, 360);
@@ -197,13 +197,13 @@ function scoreScreen() {
 function main() {
 	let canvas = document.querySelector('#GAME');
 	let context = canvas.getContext('2d');
-	context.font = "60px 'Share Tech Mono', 'Century Gothic', monospace";
+	context.font = "60px monospace";
 	context.fillStyle = '#66d';
 	context.fillText('Capricorn Decka', 150, 300);
-	context.font = "40px 'Share Tech Mono', 'Century Gothic', monospace";
+	context.font = "40px monospace";
 	context.fillStyle = '#e0ffff';
 	context.fillText('A Card Matching Game', 180, 360);
-	context.font = "30px 'Share Tech Mono', 'Century Gothic', monospace";
+	context.font = "30px monospace";
 	context.fillStyle = '#fff';
 	context.fillText('Click To Play', 300, 500);
 	canvas.addEventListener('mousedown', (e) => {
