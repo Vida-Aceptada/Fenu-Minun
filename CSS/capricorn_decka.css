@@ -1,5 +1,8 @@
 body {
+	background-color: #000;
 	background-image: url('../Images/beanstalk-dark.png'); /* Background pattern from Toptal Subtle Patterns */
+	background-position: 0 0;
+	background-size: 30%;
 }
 
 #GAME {

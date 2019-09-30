@@ -37,12 +37,18 @@ a {
 h1, h1 a {
 	background-color: #000;
 	background-image: url('Images/beanstalk-dark.png'); /* Background pattern from Toptal Subtle Patterns */
+	background-position: 0 0;
+	background-size: 30%;
 	margin: 0;
-	padding: 3.35rem 0;
+	padding: 1.5rem 0;
 	color: #fff;
-	font-size: 5rem;
-	letter-spacing: 0.5rem;
+	font-size: 3.5rem;
+	letter-spacing: 1rem;
 	text-shadow: 0 0 0.1rem #ccc, 0 0 0.25rem #666, 0 0 0.1rem #000;
+}
+
+h1 a {
+	background: none;
 }
 
 h3 {
@@ -88,7 +94,7 @@ div article {
 }
 
 #ABOUT p {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 #PROJECTS article {
@@ -104,8 +110,8 @@ div article {
 }
 
 #CONTACT article {
-	padding: 5rem 22rem;
-	font-size: 2.25rem;
+	padding: 6rem 20rem;
+	font-size: 2.5rem;
 	color: #cff;
 }
 
@@ -135,7 +141,7 @@ footer {
 /* Buttons */
 article h3 {
 	padding: 1rem;
-	margin: 2rem auto;
+	margin: 6rem auto;
 	background-color: #222;
 	border-radius: 0.5rem;
 	border: .08rem solid #fff;
@@ -186,10 +192,10 @@ article h3 a {
 /* Smaller Mobile Devices */
 @media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-width: 812px) {
 	h1, h1 a {
-		color: aqua;
+		color: #fff;
 		font-size: 1.5rem;
 		letter-spacing: 0.5rem;
-		text-shadow: 0 0 0.05rem aqua, 0 0 0.1rem #666, 0 0 0.05rem #000;
+		text-shadow: 0 0 0.05rem #ccc, 0 0 0.1rem #666, 0 0 0.05rem #000;
 	}
 	
 	nav > ul {
