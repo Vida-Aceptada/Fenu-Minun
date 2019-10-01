@@ -1,10 +1,3 @@
-body {
-	background-color: #000;
-	background-image: url('../Images/beanstalk-dark.png'); /* Background pattern from Toptal Subtle Patterns */
-	background-position: 0 0;
-	background-size: 30%;
-}
-
 h1, h1 a {
 	background: none;
 }
@@ -24,25 +17,22 @@ textarea[name="bot input"] {
 	color: aqua;
 	font-family: 'Cousine', 'Century Gothic', monospace;
 	padding: .64rem;
-	border: 0.08rem solid #fff;
+	border: none;
 	margin: 0;
 	display: inline-block;
 }
 
 textarea[name="bot input"]:focus {
-	box-shadow: inset 0rem 0rem 0.08rem 0.08rem darkslategray;
+	background-color: #222;
 }
 
 /* Display */
 
 #CHAT_DISPLAY {
-	height: 18rem;
+	height: 20rem;
 	width: 41.12rem;
 	color: aqua;
 	font-family: 'Cousine', 'Century Gothic', monospace;
-	padding: 0rem 0rem .64rem 0rem;
-	border: 0.08rem solid #fff;
-	border-bottom: none;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
 	margin: auto;
@@ -50,7 +40,6 @@ textarea[name="bot input"]:focus {
 }
 
 #CHAT_TIME {
-	border-bottom: 0.08rem solid #fff;
 	padding: 0.5rem;
 	background-color: #000;
 	border-top-right-radius: 0.5rem;
@@ -58,22 +47,22 @@ textarea[name="bot input"]:focus {
 }
 
 #MESSAGES {
-	height: 83%;
+	height: 18rem;
 	overflow: auto;
-	padding: .64rem;
+	margin: 0;
+	color: #222;
 }
 
 #MESSAGES > p {
 	font-size: 0.8rem;
-	color: #fff;
+	color: #222;
 	opacity: 0.75;
 }
 
 #MESSAGES div {
 	float: left;
 	clear: left;
-	background-color: #000;
-	border: 0.08rem solid slategrey;
+	background-color: #ccc;
 	border-radius: 0.5rem;
 	width: 50%;
 	min-height: 2rem;
@@ -119,7 +108,6 @@ textarea[name="bot input"]:focus {
 	width: 4.56rem;
 	display: inline-block;
 	padding: .64rem;
-	border: 0.08rem solid #fff;
 	border-left: none;
 	border-bottom-right-radius: 0.5rem;
 	height: 5rem;
@@ -132,9 +120,9 @@ textarea[name="bot input"]:focus {
 	width: 4.5rem;
 	color: cyan;
 	background-color: darkslategray;
-	border: .08rem solid #fff;
+	border: none;
 	border-radius: .32rem;
-	margin: 0rem 0rem 0.24rem 0rem
+	margin: 0rem 0rem 0.48rem 0rem;
 }
 
 #CHAT_OPTIONS input:hover, #OPTIONS_MODIFIER input:hover {
@@ -148,9 +136,8 @@ textarea[name="bot input"]:focus {
 	z-index: 1;
 	top: 40%;
 	left: 40%;
-	border: 0.08rem solid #fff;
 	border-radius: 0.5rem;
-	background-color: #000;
+	background-color: #222;
 	padding: 1rem;
 	box-shadow: 0.16rem 0.32rem 0.16rem 0.16rem #000;
 	display: none;
@@ -166,7 +153,7 @@ textarea[name="bot input"]:focus {
 #CHAT_COLORS span {
 	float: left;
 	clear: left;
-	margin-bottom: .5rem;
+	margin-bottom: 1.5rem;
 	color: aqua;
 }
 
@@ -198,6 +185,7 @@ textarea[name="bot input"]:focus {
 	color: slategray;
 	font-weight: bolder;
 	overflow: hidden;
+	border: none;
 }
 
 #HELP {
@@ -212,7 +200,10 @@ textarea[name="bot input"]:focus {
 }
 
 #DRAG_BAR {
-	height: 1rem;
-	width: 100%;
-	cursor: move;
+    height: 100%;
+    width: 100%;
+    cursor: move;
+    position: absolute;
+    z-index: -1;
+    margin: -1rem;
 }

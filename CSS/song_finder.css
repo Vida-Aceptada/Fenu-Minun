@@ -56,37 +56,34 @@ textarea[name='artist search'] {
 /* Display */
 
 #SONG_FINDER {
-	padding-top: 1rem;
+	padding: 1rem;
 	position: fixed;
 	width: 100%;
 	top: 7rem;
-	background-color: #000;
-	box-shadow: 0 2rem 1rem 1rem #222;
-}
-
-#SONG_RESULT, #LYRICS_RESULT {
-	margin-top: 1rem;
+	background-color:#000;
 }
 
 #SONG_RESULT {
-	background-color: #222;
-	padding-top: 1.5rem;
+	padding: 1.5rem;
 	height: 2rem;
 }
 
 #LYRICS {
 	position: absolute;
-	top: 17rem;
+	top: 11rem;
 	width: 100%;
 	z-index: -1;
 }
 
 #LYRICS_RESULT {
+	background-color: rgba(0,0,0,0.75);
+	border-radius: 0.25rem;
 	white-space: pre-line;
-	width: 80%;
+	width: 70%;
 	margin: auto;
 	font-size: 1.5rem;
 	padding: 1rem;
+	margin-bottom: 2rem;
 }
 
 #YTLINK {

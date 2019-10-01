@@ -6,6 +6,9 @@ html {
 
 body {
 	background-color: #222;
+	background-image: url('Images/connectwork.png'); /* Background pattern from Toptal Subtle Patterns */
+	background-position: 0 0;
+	background-size: 30%;
 	text-align: center;
 	color: #fff;
 	font-family: 'Cousine', 'Century Gothic',  monospace;
@@ -36,7 +39,7 @@ a {
 /* Headers */
 h1, h1 a {
 	background-color: #000;
-	background-image: url('Images/beanstalk-dark.png'); /* Background pattern from Toptal Subtle Patterns */
+	background-image: url('Images/curls.png'); /* Background pattern from Toptal Subtle Patterns */
 	background-position: 0 0;
 	background-size: 30%;
 	margin: 0;
@@ -85,15 +88,22 @@ div article {
 
 #ABOUT {
 	display: block;
+}
+
+#ABOUT, #CONTACT {
 	margin-top: 5rem;
 }
 
-#ABOUT article {
-	padding: 0 20rem;
+#ABOUT article, #CONTACT article {
+	padding: 0.1rem 2rem;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.75);
+	margin: 0 18rem;
+	border-radius: 0.25rem;
 }
 
 #ABOUT p {
-	font-size: 2rem;
+	font-size: 1.75rem;
 }
 
 #PROJECTS article {
@@ -108,18 +118,13 @@ div article {
 	display: none;
 }
 
-#CONTACT article {
-	padding: 6rem 20rem;
-	font-size: 2.5rem;
-	color: #cff;
-}
-
 #CONTACT article p {
+	font-size: 2.5rem;
 	margin: 1rem;
 }
 
 #CONTACT article a {
-	color: #fff;
+	color: #666;
 }
 
 footer {
@@ -127,26 +132,25 @@ footer {
 	bottom: 0;
 	right: 0;
 	font-size: 0.75rem;
-	background-color: #000;
+	background-color: rgba(0,0,0,0.75);
 	color: #fff;
 	padding: 0.25rem 1rem;
 	text-align: right;
-	border-top-left-radius: 1rem;
+	border-top-left-radius: 0.25rem;
 }
 
 /* Buttons */
 article h3 {
 	padding: 0rem;
 	margin: 5.5rem auto;
-	background-color: #000;
-	border-radius: 0.5rem;
+	background-color: rgba(0,0,0,0.75);
+	border-radius: 0.25rem;
 	width: 21rem;
 	transition-duration: 0.5s;
 }
 
 article h3:hover {
-	background-color: #2ac;
-	opacity: 0.85;
+	background-color: rgba(0, 255, 255,0.75);
 	transition-duration: 0.5s;
 }
 
@@ -242,5 +246,9 @@ article h3 a {
 	
 	#PROJECTS h3:last-child {
 		display: none;
+	}
+
+	#PROJECTS h3 a span {
+		margin: 0 0.5rem;
 	}
 }

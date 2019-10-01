@@ -12,9 +12,9 @@
 	</head>
 	<body>
 		<h1><a href="../index.html" title="Return To Homepage">Fenu Minun</a></h1>
-		<div id="CHAT_DISPLAY" class="mainBackground borders textColor">
-			<div id="CHAT_TIME" class="secondaryBackground borders"></div>
-			<div id="MESSAGES">
+		<div id="CHAT_DISPLAY" class="mainBackground">
+			<div id="CHAT_TIME" class="outerBackground otherTextColor"></div>
+			<div id="MESSAGES" class="textColor">
 				<div class="botMessage">
 					Welcome! The current chatbot integration is being reworked, but you can still type in the chat and view other features.
 					<!--Welcome! Click the bottom left corner box to type into the chat and start a conversation with the chatbot. If you need more information click on the "Help" button.-->
@@ -22,20 +22,23 @@
 			</div>
 		</div>
 		<div id="BOT_INPUT">
-			<textarea name="bot input" class="borders secondaryBackground textColor"></textarea>
-			<div id="CHAT_OPTIONS" class="borders secondaryBackground">
-				<input name="username" type="button" value="Username" onclick="displayOptions('USERNAME');" class="mainBackground borders textColor">
-				<input name="colors" type="button" value="Colors" onclick="displayOptions('CHAT_COLORS');" class="mainBackground borders textColor">
-				<input name="help" type="button" value="Help" onclick="displayOptions('HELP');" class="mainBackground borders textColor">
+			<textarea name="bot input" class="outerBackground otherTextColor"></textarea>
+			<div id="CHAT_OPTIONS" class="outerBackground">
+				<input name="username" type="button" value="Username" onclick="displayOptions('USERNAME');" class="mainBackground otherTextColor">
+				<input name="colors" type="button" value="Colors" onclick="displayOptions('CHAT_COLORS');" class="mainBackground otherTextColor">
+				<input name="help" type="button" value="Help" onclick="displayOptions('HELP');" class="mainBackground otherTextColor">
 			</div>
 		</div>
-		<div id="OPTIONS_WINDOW" class="borders secondaryBackground">
+		<div id="OPTIONS_WINDOW">
 			<div id="DRAG_BAR"></div>
 			<div id="CHAT_COLORS" class="options">
-				<span class="textColor">Border Color:</span><input name="chat borders" type="color" value="#00FFFF"><br>
-				<span class="textColor">Main Background:</span><input name="main background" type="color" value="#2F4F4F"><br>
-				<span class="textColor">Secondary Background:</span><input name="secondary background" type="color" value="#000000"><br>
-				<span class="textColor">Text Color:</span><input name="text color" type="color" value="#00FFFF">
+				<span class="otherTextColor">Main Background:</span><input name="main background" type="color" value="#2F4F4F"><br>
+				<span class="otherTextColor">Outer Background:</span><input name="outer background" type="color" value="#000000"><br>
+				<span class="otherTextColor">User Background:</span><input name="secondary background" type="color" value="#cccccc"><br>
+				<span class="otherTextColor">User Message Color:</span><input name="text color" type="color" value="#222222"><br>
+				<span class="otherTextColor">Other Color:</span><input name="other color" type="color" value="#00aee0"><br>
+				<span class="otherTextColor">Options Background:</span><input name="options background" type="color" value="#222222"><br>
+				<span class="otherTextColor">Button Background:</span><input name="button background" type="color" value="#2f4f4f"><br>
 			</div>
 			<div id="USERNAME" class="options">
 				<textarea name="username" maxlength="20" placeholder="Enter a username"></textarea><br>
@@ -65,8 +68,8 @@
 				</p>
 			</div>
 			<div id="OPTIONS_MODIFIER">
-				<input type="button" name="save" value="Save" onclick="applyOptions();" class="mainBackground borders textColor">
-				<input type="button" name="close" value="Close" onclick="hideOptions();" class="mainBackground borders textColor">
+				<input type="button" name="save" value="Save" onclick="applyOptions();" class="mainBackground otherTextColor">
+				<input type="button" name="close" value="Close" onclick="hideOptions();" class="mainBackground otherTextColor">
 			</div>
 		</div>
 		<footer role="contentinfo">

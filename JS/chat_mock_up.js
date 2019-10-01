@@ -7,9 +7,12 @@
 let username = 'Guest';
 let currentOptions = '';
 let mainColor;
+let outerBackground;
 let secondaryColor;
-let borderColor;
 let textColor;
+let otherTextColor;
+let optionsBackground;
+let buttonBackground;
 
 function getTime() {
     let currentTime = new Date();
@@ -86,13 +89,19 @@ function applyOptions() {
             break;
         case 'CHAT_COLORS':
             mainColor = document.querySelectorAll('input[name="main background"]')[0].value;
+            outerColor = document.querySelectorAll('input[name="outer background"]')[0].value;
             secondaryColor = document.querySelectorAll('input[name="secondary background"]')[0].value;
-            borderColor = document.querySelectorAll('input[name="chat borders"]')[0].value;
             textColor = document.querySelectorAll('input[name="text color"]')[0].value;
+            otherTextColor = document.querySelectorAll('input[name="other color"]')[0].value;
+            optionsBackground = document.querySelectorAll('input[name="options background"]')[0].value;
+            buttonBackground = document.querySelectorAll('input[name="button background"]')[0].value;
             setColor('.mainBackground', 'background-color', mainColor);
+            setColor('.outerBackground', 'background-color', outerColor);
             setColor('.secondaryBackground', 'background-color', secondaryColor);
-            setColor('.borders', 'border-color', borderColor);
             setColor('.textColor', 'color', textColor);
+            setColor('.otherTextColor', 'color', otherTextColor);
+            setColor('#OPTIONS_WINDOW', 'background-color', optionsBackground);
+            setColor('input[type="button"]', 'background-color', buttonBackground);
             break;
         default:
             console.log('Invalid Option');
