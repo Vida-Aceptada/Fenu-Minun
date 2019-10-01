@@ -145,7 +145,6 @@ article h3 {
 	margin: 5.5rem auto;
 	background-color: rgba(0,0,0,0.75);
 	border-radius: 0.25rem;
-	width: 21rem;
 	transition-duration: 0.5s;
 }
 
@@ -156,7 +155,7 @@ article h3:hover {
 
 article h3 img {
 	display: block;
-	margin: auto;
+	margin: 0;
 }
 
 article h3 a {
