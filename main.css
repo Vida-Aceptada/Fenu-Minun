@@ -55,7 +55,8 @@ h1 a {
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 1.75rem;
+	line-height: 3rem;
 }
 
 nav {
@@ -156,6 +157,8 @@ article h3:hover {
 article h3 img {
 	display: block;
 	margin: 0;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
 }
 
 article h3 a {

@@ -90,4 +90,10 @@ textarea[name='artist search'] {
 	font-size: 2rem;
 	color: #fff;
 	font-weight: bolder;
+	transition: all 0.5s;
+}
+
+#YTLINK:hover {
+	color: aqua;
+	transition: all 0.5s;
 }
