@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cousine&display=swap');
 
 html {
 	font-size: 16px;
 }
 
 body {
-	background-color: #000;
+	background-color: #222;
 	text-align: center;
 	color: #fff;
-	font-family: 'Share Tech Mono', 'Century Gothic',  monospace;
+	font-family: 'Cousine', 'Century Gothic',  monospace;
 	margin: 0rem;
 	overflow-y: scroll;
 }
@@ -56,9 +56,8 @@ h3 {
 }
 
 nav {
-	background-color: #222;
-	border-top: 0.08rem solid #fff;
-	border-bottom: 0.08rem solid #fff;
+	background-color: #000;
+	padding: 0.08rem;
 }
 
 
@@ -128,23 +127,19 @@ footer {
 	bottom: 0;
 	right: 0;
 	font-size: 0.75rem;
-	background-color: #111;
+	background-color: #000;
 	color: #fff;
 	padding: 0.25rem 1rem;
 	text-align: right;
-	border-top: 0.08rem solid #fff;
-	border-top: 0.08rem solid #fff;
-	border-left: 0.08rem solid #fff;
 	border-top-left-radius: 1rem;
 }
 
 /* Buttons */
 article h3 {
 	padding: 0rem;
-	margin: 6rem auto;
-	background-color: #222;
+	margin: 5.5rem auto;
+	background-color: #000;
 	border-radius: 0.5rem;
-	border: .08rem solid #fff;
 	width: 21rem;
 	transition-duration: 0.5s;
 }

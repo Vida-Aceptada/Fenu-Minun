@@ -10,7 +10,7 @@ h1, h1 a {
 }
 
 input {
-	font-family: 'Share Tech Mono', 'Century Gothic', monospace;
+	font-family: 'Cousine', 'Century Gothic', monospace;
 }
 
 /* Text Boxes */
@@ -22,7 +22,7 @@ textarea[name="bot input"] {
 	border-bottom-left-radius: 0.5rem;
 	background-color: #000;
 	color: aqua;
-	font-family: 'Share Tech Mono', 'Century Gothic', monospace;
+	font-family: 'Cousine', 'Century Gothic', monospace;
 	padding: .64rem;
 	border: 0.08rem solid #fff;
 	margin: 0;
@@ -39,7 +39,7 @@ textarea[name="bot input"]:focus {
 	height: 18rem;
 	width: 41.12rem;
 	color: aqua;
-	font-family: 'Share Tech Mono', 'Century Gothic', monospace;
+	font-family: 'Cousine', 'Century Gothic', monospace;
 	padding: 0rem 0rem .64rem 0rem;
 	border: 0.08rem solid #fff;
 	border-bottom: none;
