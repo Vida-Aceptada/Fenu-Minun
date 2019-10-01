@@ -140,12 +140,12 @@ footer {
 
 /* Buttons */
 article h3 {
-	padding: 1rem;
+	padding: 0rem;
 	margin: 6rem auto;
 	background-color: #222;
 	border-radius: 0.5rem;
 	border: .08rem solid #fff;
-	width: 18rem;
+	width: 21rem;
 	transition-duration: 0.5s;
 }
 
