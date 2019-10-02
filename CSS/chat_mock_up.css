@@ -20,7 +20,7 @@ textarea[name="bot input"] {
 	border: none;
 	margin: 0;
 	display: inline-block;
-	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem #000;
+	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem rgba(0,0,0,0.75);
 }
 
 textarea[name="bot input"]:focus {
@@ -38,7 +38,7 @@ textarea[name="bot input"]:focus {
 	border-top-right-radius: 0.5rem;
 	margin: auto;
 	background-color: darkslategrey;
-	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem #000;
+	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem rgba(0,0,0,0.75);
 }
 
 #CHAT_TIME {
@@ -119,7 +119,7 @@ textarea[name="bot input"]:focus {
 	height: 5rem;
 	vertical-align: top;
 	margin: 0;
-	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem #000;
+	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem rgba(0,0,0,0.75);
 }
 
 #CHAT_OPTIONS input, #OPTIONS_MODIFIER input {
