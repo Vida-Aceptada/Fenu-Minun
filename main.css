@@ -54,13 +54,18 @@ h1 a {
 	background: none;
 }
 
+h2 {
+	font-size: 3rem;
+	text-shadow: 0.5rem 0.5rem 0.1rem #000;
+}
+
 h3 {
 	font-size: 1.75rem;
 	line-height: 3rem;
 }
 
 nav {
-	background-color: #333;
+	background-color: #444;
 	padding: 0.08rem;
 	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem #000, -0.5rem 0.5rem 0.1rem 0.1rem #000;
 }
@@ -74,22 +79,23 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
-	color: #fff;
+	color: #111;
 	transition: all 0.5s;
 }
 
 nav > ul > li > a:hover {
-	text-shadow: 0 0 0.1rem #fff;
+	color: #fff;
 	transition: all 0.5s;
 }
 
 /* Sections */
-div article {
-	text-align: left;
+
+.main {
+	margin-bottom: 15rem;
 }
 
-#ABOUT {
-	display: block;
+div article {
+	text-align: left;
 }
 
 #ABOUT, #CONTACT {
@@ -117,10 +123,6 @@ div article {
 		"b b b";
 }
 
-.main {
-	display: none;
-}
-
 #CONTACT article p {
 	font-size: 2.5rem;
 	margin: 1rem;
@@ -145,7 +147,7 @@ footer {
 /* Buttons */
 article h3 {
 	padding: 0rem;
-	margin: 5.5rem auto;
+	margin: auto;
 	background-color: rgba(0,0,0,0.75);
 	border-radius: 0.25rem;
 	transition-duration: 0.5s;

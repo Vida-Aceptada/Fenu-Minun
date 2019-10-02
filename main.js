@@ -3,6 +3,30 @@
 /* exported dragElement */
 
 const request = new XMLHttpRequest();
+
+function sectionToggle(section) {
+	let aboutHeight = document.getElementById('ABOUT').scrollHeight * 2;
+	let projectsHeight = document.getElementById('PROJECTS').scrollHeight * 2;
+	let totalHeight;
+	switch(section) {
+		case 'PROJECTS':
+			totalHeight = aboutHeight;
+			break;
+		case 'CONTACT':
+			totalHeight = aboutHeight + projectsHeight;
+			break;
+		default:
+			totalHeight = 0;
+			break;
+	}
+	window.scroll({
+		top: totalHeight,
+		left: 0,
+		behavior: 'smooth'
+	});
+}
+
+/* safekeeping
 let targetEl;
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -37,7 +61,8 @@ function sectionToggle(section) {
 		}, 30); // the speed of the fade is set here
 	}
 }
-	
+*/
+
 
 function dragElement(elmnt) {
 	let pos1 = 0,

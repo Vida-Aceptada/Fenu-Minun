@@ -65,7 +65,7 @@ textarea[name="bot input"]:focus {
 	float: left;
 	clear: left;
 	background-color: #ccc;
-	border-radius: 0.5rem;
+	border-radius: 0.5rem 0rem 0rem 0.5rem;
 	width: 50%;
 	min-height: 2rem;
 	text-align: left;
@@ -84,6 +84,10 @@ textarea[name="bot input"]:focus {
 	clear: right;
 	background-color: #fff;
 	color: black;
+}
+
+#MESSAGES .secondaryBackground {
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
 }
 
 #MESSAGES div img {
