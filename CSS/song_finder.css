@@ -60,7 +60,8 @@ textarea[name='artist search'] {
 	position: fixed;
 	width: 100%;
 	top: 7rem;
-	background-color:#000;
+	background-color:#333;
+	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem #000, -0.5rem 0.5rem 0.1rem 0.1rem #000;
 }
 
 #SONG_RESULT {
@@ -84,6 +85,7 @@ textarea[name='artist search'] {
 	font-size: 1.5rem;
 	padding: 1rem;
 	margin-bottom: 2rem;
+	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem #000;
 }
 
 #YTLINK {
@@ -91,6 +93,7 @@ textarea[name='artist search'] {
 	color: #fff;
 	font-weight: bolder;
 	transition: all 0.5s;
+	text-shadow: 0.3rem 0.3rem 0.1rem #000;
 }
 
 #YTLINK:hover {

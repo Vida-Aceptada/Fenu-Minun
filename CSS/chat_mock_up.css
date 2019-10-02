@@ -13,17 +13,18 @@ textarea[name="bot input"] {
 	height: 5rem;
 	resize: none;
 	border-bottom-left-radius: 0.5rem;
-	background-color: #000;
+	background-color: #111;
 	color: aqua;
 	font-family: 'Cousine', 'Century Gothic', monospace;
 	padding: .64rem;
 	border: none;
 	margin: 0;
 	display: inline-block;
+	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem #000;
 }
 
 textarea[name="bot input"]:focus {
-	background-color: #222;
+	background-color: #444;
 }
 
 /* Display */
@@ -37,11 +38,12 @@ textarea[name="bot input"]:focus {
 	border-top-right-radius: 0.5rem;
 	margin: auto;
 	background-color: darkslategrey;
+	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem #000;
 }
 
 #CHAT_TIME {
 	padding: 0.5rem;
-	background-color: #000;
+	background-color: #111;
 	border-top-right-radius: 0.5rem;
 	border-top-left-radius: 0.5rem;
 }
@@ -104,7 +106,7 @@ textarea[name="bot input"]:focus {
 }
 
 #CHAT_OPTIONS {
-	background-color: #000;
+	background-color: #111;
 	width: 4.56rem;
 	display: inline-block;
 	padding: .64rem;
@@ -113,6 +115,7 @@ textarea[name="bot input"]:focus {
 	height: 5rem;
 	vertical-align: top;
 	margin: 0;
+	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem #000;
 }
 
 #CHAT_OPTIONS input, #OPTIONS_MODIFIER input {
