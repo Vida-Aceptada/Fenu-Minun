@@ -4,9 +4,23 @@
 
 const request = new XMLHttpRequest();
 
+function fullHeight(el) {
+	el = window.getComputedStyle(document.querySelectorAll(el)[0]);
+	let height = el.height;
+	let marginBottom = el.marginBottom;
+	let marginTop = el.marginTop;
+	let paddingBottom = el.paddingBottom;
+	let paddingTop = el.paddingTop;
+	return cssToInt(height) + cssToInt(marginBottom) + cssToInt(marginTop) + cssToInt(paddingBottom) + cssToInt(paddingTop);
+}
+
+function cssToInt(el) {
+	return parseInt(el.substring(0, el.length -2));
+}
+
 function sectionToggle(section) {
-	let aboutHeight = document.getElementById('ABOUT').scrollHeight * 2;
-	let projectsHeight = document.getElementById('PROJECTS').scrollHeight * 2;
+	let aboutHeight = fullHeight('h1') + fullHeight('nav') + fullHeight('#ABOUT');
+	let projectsHeight = fullHeight('#PROJECTS')
 	let totalHeight;
 	switch(section) {
 		case 'PROJECTS':

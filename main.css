@@ -240,7 +240,14 @@ article h3 a {
 	#PROJECTS h3:last-child {
 		display: none;
 	}
+
+	#PROJECTS article {
+		grid-template:
+			"a"
+			"b";
+	}
 }
+
 @media (orientation: landscape) and (max-width: 812px) {
 	nav > ul > li {
 		margin: 0;
