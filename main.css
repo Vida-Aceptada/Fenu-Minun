@@ -103,16 +103,25 @@ div article {
 }
 
 #ABOUT article, #CONTACT article {
-	padding: 0.1rem 2rem;
+	padding: 2rem;
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
-	margin: 0 18rem;
+	margin: 0 auto;
 	border-radius: 0.25rem;
 	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem rgba(0,0,0,0.5);
+	max-width: 50rem;
 }
 
 #ABOUT p {
 	font-size: 1.75rem;
+}
+
+#ABOUT p:first-child {
+    margin-top: 0;
+}
+
+#ABOUT p:last-child {
+    margin-bottom: 0;
 }
 
 #PROJECTS article {
