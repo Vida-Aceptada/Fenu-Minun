@@ -10,7 +10,7 @@ input {
 /* Text Boxes */
 
 textarea[name="bot input"] {
-	width: 33.9rem;
+	width: 34rem;
 	height: 5rem;
 	resize: none;
 	border-bottom-left-radius: 0.5rem;

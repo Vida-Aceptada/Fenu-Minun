@@ -72,8 +72,8 @@
 				<div id="BOT_INPUT">
 					<textarea name="bot input" class="outerBackground otherTextColor"></textarea>
 					<div id="CHAT_OPTIONS" class="outerBackground">
-						<input name="options" type="button" value="Options" onclick="displayWindow('OPTIONS_WINDOW');" class="mainBackground otherTextColor">
-						<input name="help" type="button" value="Help" onclick="displayWindow('HELP_WINDOW');" class="mainBackground otherTextColor">
+						<input class="chatButton" name="options" type="button" value="Options" onclick="displayWindow('OPTIONS_WINDOW');" class="mainBackground otherTextColor">
+						<input class="chatButton" name="help" type="button" value="Help" onclick="displayWindow('HELP_WINDOW');" class="mainBackground otherTextColor">
 					</div>
 				</div>
 				<div id="OPTIONS_WINDOW">
@@ -90,8 +90,8 @@
 						<span class="otherTextColor">Button Background:</span><input name="button background" type="color" value="#2f4f4f"><br>
 					</div>
 					<div id="OPTIONS_MODIFIER">
-						<input type="button" name="save" value="Save" onclick="applyOptions();" class="mainBackground otherTextColor">
-						<input type="button" name="close" value="Close" onclick="hideWindow('OPTIONS_WINDOW');" class="mainBackground otherTextColor">
+						<input class="chatButton" type="button" name="save" value="Save" onclick="applyOptions();" class="mainBackground otherTextColor">
+						<input class="chatButton" type="button" name="close" value="Close" onclick="hideWindow('OPTIONS_WINDOW');" class="mainBackground otherTextColor">
 					</div>
 				</div>
 				<div id="HELP_WINDOW">
@@ -103,14 +103,14 @@
 						</p>
 						<h4>Adding a Username:</h4>
 						<p>
-							To change your username click on the "Username" button on the bottom right corner of the chat. Then type in your desired username into the text box and click the save button.
+							To change your username click on the "Options" button on the bottom right corner of the chat. Then type in your desired username into the text box and click the save button.
 						</p>
 						<p>
 							The username length is limited to 1-20 characters.
 						</p>
 						<h4>Customizing Chat Colors:</h4>
 						<p>
-							To customize the chat colors click on the "Colors" button on the bottom right corner of the chat.
+							To customize the chat colors click on the "Options" button on the bottom right corner of the chat.
 						</p>
 						<p>
 							You should see different properties that are customizable. You can tweak each one to your liking by clicking on the colored box to the right of each which will bring up a color selection toolbox.
@@ -120,7 +120,7 @@
 						</p>
 					</div>
 					<div id="OPTIONS_MODIFIER">
-						<input type="button" name="close" value="Close" onclick="hideWindow('HELP_WINDOW');" class="mainBackground otherTextColor">
+						<input class="chatButton" type="button" name="close" value="Close" onclick="hideWindow('HELP_WINDOW');" class="mainBackground otherTextColor">
 					</div>
 				</div>
 			</div>
