@@ -1,5 +1,5 @@
 let heartImage = new Image(100, 100);
-heartImage.src = '../Images/Card Game/card flip life.png';
+heartImage.src = 'Images/Card Game/card flip life.png';
 
 const game = {};
 game.start = false;
@@ -55,7 +55,7 @@ function toggleSymbol(context, j, i, card, unset = false) {
 		context.fillRect( j + 20, i + 40, 60, 60);
 	} else {
 		let cardImage = new Image();
-		cardImage.src = `../Images/Card Game/${card}.png`;
+		cardImage.src = `Images/Card Game/${card}.png`;
 		cardImage.addEventListener('load', function() {
 			context.drawImage(cardImage, j + 20, i + 40, 60, 60);
 		}, false);

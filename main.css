@@ -9,11 +9,14 @@ body {
 	background-image: url('Images/connectwork.png'); /* Background pattern from Toptal Subtle Patterns */
 	background-position: 0 0;
 	background-size: 30%;
+	background-attachment: fixed;
 	text-align: center;
 	color: #fff;
 	font-family: 'Cousine', 'Century Gothic',  monospace;
 	margin: 0rem;
 	overflow-y: scroll;
+	width: 100%;
+	height: 100%;
 }
 
 a {
@@ -92,6 +95,7 @@ nav > ul > li > a:hover {
 
 .main {
 	margin-bottom: 15rem;
+	padding-top: 5rem;
 }
 
 div article {
@@ -154,28 +158,30 @@ footer {
 }
 
 /* Buttons */
-article h3 {
-	padding: 0rem;
-	margin: auto;
-	background-color: rgba(0,0,0,0.75);
-	border-radius: 0.25rem;
-	transition-duration: 0.5s;
-	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem rgba(0,0,0,0.5);
+article a {
+    padding: 0rem;
+    margin: auto;
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 0.25rem;
+    transition-duration: 0.5s;
+    box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem rgba(0,0,0,0.5);
+    width: 18rem;
+    height: 16rem;
 }
 
-article h3:hover {
+article a:hover {
 	background-color: rgba(0, 255, 255,0.75);
 	transition-duration: 0.5s;
 }
 
 article h3 img {
-	display: block;
-	margin: 0;
-	border-top-left-radius: 0.25rem;
-	border-top-right-radius: 0.25rem;
+    display: block;
+    margin: 2rem auto 4rem auto;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
 }
 
-article h3 a {
+article a h3 {
 	color: #fff;
 	padding: 0rem;
 	margin: 0rem;
@@ -208,6 +214,7 @@ article h3 a {
 
 	.main {
 		margin-bottom: 0;
+		padding-top: 0;
 	}
 
 	h2 {
@@ -228,16 +235,11 @@ article h3 a {
 		margin: 0;
 	}
 
-	#PROJECTS article h3 {
+	#PROJECTS article a {
 		margin: 1rem auto;
-		width: 90%;
 	}
 
-	#PROJECTS article h3 img {
-		width: 100%;
-	}
-
-	#PROJECTS h3:last-child {
+	#PROJECTS a:last-child {
 		display: none;
 	}
 
@@ -264,4 +266,32 @@ article h3 a {
 			"a a"
 			"b b";
 	}
+}
+
+#VIEWER {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+	margin-left: -50%;
+	display: none;
+	opacity: 0;
+}
+
+input.project {
+    border: none;
+	background: none;
+    color: #333;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+input.project:hover {
+	cursor: pointer;
+	color: #fff;
 }

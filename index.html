@@ -2,7 +2,13 @@
 <html>
 	<head>
 		<link href="main.css" rel="stylesheet">
+		<link href="CSS/song_finder.css" rel="stylesheet">
+		<link href="CSS/chat_mock_up.css" rel="stylesheet">
+		<link href="CSS/capricorn_decka.css" rel="stylesheet">
 		<script src="main.js"></script>
+		<script src="JS/song_finder.js"></script>
+		<script src="JS/chat_mock_up.js"></script>
+		<script src="JS/capricorn_decka.js"></script>
 		<meta charset='UTF-8'>
 		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
 		<link rel="icon" href="Images/favicon.ico">
@@ -26,9 +32,9 @@
 		<div id="PROJECTS" class='main'>
 			<h2>Projects</h2>
 			<article>
-				<h3><a href="Projects/song_finder.html" target="_blank" rel="noopener"><img src="Images/Song Finder.png">Song Finder</a></h3>
-				<h3><a href="Projects/chat_mock_up.html" target="_blank" rel="noopener"><img src="Images/Chat Mockup.png">Chat Mock-Up</a></h3>
-				<h3><a href="Projects/capricorn_decka.html" target="_blank" rel="noopener"><img src="Images/Capricorn Decka.png">Capricorn Decka</a></h3>
+				<a href="javascript:;" onclick="projectViewer('SONG_SEARCH');"><h3><img src="Images/music note.png">Song Search</h3></a>
+				<a href="javascript:;" onclick="projectViewer('CHAT_BOT');"><h3><img src="Images/chat icon.png">Chat Bot</h3></a>
+				<a href="javascript:;" onclick="projectViewer('CAPRICORN_DECKA');"><h3><img src="Images/capricorn decka.png">Capricorn Decka</h3></a>
 			</article>
 		</div>
 		<div id="CONTACT" class='main'>
@@ -37,6 +43,91 @@
 				<p>Interested or have questions?</p>
 				<p>Get in contact: <a href="mailto:fenu.minun@gmail.com">fenu.minun@gmail.com</a></p>
 			</article>
+		</div>
+		<div id="VIEWER">
+			<div id="SONG_SEARCH">
+				<input type="button" name="project close" value="Close" class="project" onclick="projectViewer('SONG_SEARCH');"></input>
+				<div id="SONG_FINDER">
+					<textarea name="song search" rows='1' wrap='off' placeholder="Song"></textarea>
+					<textarea name="artist search" rows='1' wrap='off' placeholder="Artist"></textarea>
+					<input type='button' value="Search" name="search" onclick="checkParameters();">
+				</div>
+				<div id="LYRICS">
+					<div id="SONG_RESULT"><a id="YTLINK" href="https://youtu.be" target="_blank" rel="noopener">Lyrics</a></div>
+					<div id="LYRICS_RESULT">Type in the title of the song followed by the artist.<br>Click on "Lyrics" to take you to the song's YouTube video.
+					</div>
+				</div>
+			</div>
+			<div id="CHAT_BOT">
+				<input type="button" name="project close" value="Close" class="project" onclick="projectViewer('CHAT_BOT');"></input>
+				<div id="CHAT_DISPLAY" class="mainBackground">
+					<div id="CHAT_TIME" class="outerBackground otherTextColor"></div>
+					<div id="MESSAGES" class="textColor">
+						<div class="botMessage">
+							Welcome! The current chatbot integration is being reworked, but you can still type in the chat and view other features.
+							<!--Welcome! Click the bottom left corner box to type into the chat and start a conversation with the chatbot. If you need more information click on the "Help" button.-->
+						</div>
+					</div>
+				</div>
+				<div id="BOT_INPUT">
+					<textarea name="bot input" class="outerBackground otherTextColor"></textarea>
+					<div id="CHAT_OPTIONS" class="outerBackground">
+						<input name="options" type="button" value="Options" onclick="displayWindow('OPTIONS_WINDOW');" class="mainBackground otherTextColor">
+						<input name="help" type="button" value="Help" onclick="displayWindow('HELP_WINDOW');" class="mainBackground otherTextColor">
+					</div>
+				</div>
+				<div id="OPTIONS_WINDOW">
+					<div id="USERNAME" class="options">
+						<textarea name="username" maxlength="20" placeholder="Enter a username"></textarea><br>
+					</div>
+					<div id="CHAT_COLORS" class="options">
+						<span class="otherTextColor">Main Background:</span><input name="main background" type="color" value="#2F4F4F"><br>
+						<span class="otherTextColor">Outer Background:</span><input name="outer background" type="color" value="#000000"><br>
+						<span class="otherTextColor">User Background:</span><input name="secondary background" type="color" value="#cccccc"><br>
+						<span class="otherTextColor">User Message Color:</span><input name="text color" type="color" value="#222222"><br>
+						<span class="otherTextColor">Other Color:</span><input name="other color" type="color" value="#00aee0"><br>
+						<span class="otherTextColor">Options Background:</span><input name="options background" type="color" value="#222222"><br>
+						<span class="otherTextColor">Button Background:</span><input name="button background" type="color" value="#2f4f4f"><br>
+					</div>
+					<div id="OPTIONS_MODIFIER">
+						<input type="button" name="save" value="Save" onclick="applyOptions();" class="mainBackground otherTextColor">
+						<input type="button" name="close" value="Close" onclick="hideWindow('OPTIONS_WINDOW');" class="mainBackground otherTextColor">
+					</div>
+				</div>
+				<div id="HELP_WINDOW">
+					<div id="HELP">
+						<h3>Help</h3>
+						<h4>Using the chat:</h4>
+						<p>
+							To use the chat simply click on the bottom left text box and type in using your keyboard. You should recieve replies from the chat bot.
+						</p>
+						<h4>Adding a Username:</h4>
+						<p>
+							To change your username click on the "Username" button on the bottom right corner of the chat. Then type in your desired username into the text box and click the save button.
+						</p>
+						<p>
+							The username length is limited to 1-20 characters.
+						</p>
+						<h4>Customizing Chat Colors:</h4>
+						<p>
+							To customize the chat colors click on the "Colors" button on the bottom right corner of the chat.
+						</p>
+						<p>
+							You should see different properties that are customizable. You can tweak each one to your liking by clicking on the colored box to the right of each which will bring up a color selection toolbox.
+						</p>
+						<p>
+							To change each color select or enter the desired color and click "OK". When you are finished click save to apply the changes.
+						</p>
+					</div>
+					<div id="OPTIONS_MODIFIER">
+						<input type="button" name="close" value="Close" onclick="hideWindow('HELP_WINDOW');" class="mainBackground otherTextColor">
+					</div>
+				</div>
+			</div>
+			<div id="CAPRICORN_DECKA">
+				<input type="button" name="project close" value="Close" class="project" onclick="projectViewer('CAPRICORN_DECKA');"></input>
+				<canvas id="GAME" width="800" height="640"></canvas>
+			</div>
 		</div>
 		<footer role="contentinfo">
 			© 2019 Fenu Minun. All rights reserved.

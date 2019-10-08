@@ -1,11 +1,10 @@
-/* exported displayOptions */
-/* exported hideOptions */
+/* exported displayWindow */
+/* exported hideWindow */
 /* exported chatClock */
 /* exported chatBot */
 /* exported applyOptions */
 
 let username = 'Guest';
-let currentOptions = '';
 let mainColor;
 let outerBackground;
 let secondaryColor;
@@ -13,6 +12,7 @@ let textColor;
 let otherTextColor;
 let optionsBackground;
 let buttonBackground;
+let timeStore = '';
 
 function getTime() {
     let currentTime = new Date();
@@ -23,7 +23,11 @@ function getTime() {
 }
 
 function displayTime() {
-    document.getElementById('CHAT_TIME').textContent = getTime();
+    let newTime = getTime();
+    if (newTime != timeStore) {
+        document.getElementById('CHAT_TIME').textContent = newTime;
+        timeStore = newTime;
+    }
 }
 
 function addMessage(botMessage = false) {
@@ -83,7 +87,7 @@ function setColor(selector, property, color) {
 }
 
 function applyOptions() {
-    switch(currentOptions) {
+    switch(currentCategory) {
         case 'USERNAME':
             username = document.querySelectorAll('textarea[name="username"]')[0].value;
             break;
@@ -106,26 +110,22 @@ function applyOptions() {
         default:
             console.log('Invalid Option');
     }
-    hideOptions();
+    hideWindow();
 }
 
-function displayOptions(optionMenu) {
-    currentOptions = optionMenu;
-    document.querySelectorAll('.options').forEach(element => {element.style.display = 'none';});
-    document.getElementsByName('save')[0].style.display = optionMenu == 'HELP' ? 'none' : 'inline-block';
-    document.getElementById(optionMenu).style.display = 'block';
-    document.getElementById('OPTIONS_WINDOW').style.display = 'block';
+function displayWindow(category) {
+    document.getElementById(category).style.display = 'block';
 }
 
-function hideOptions() {
-    document.getElementById('OPTIONS_WINDOW').style.display = 'none';
+function hideWindow(category) {
+    document.getElementById(category).style.display = 'none';
 }
 
 let chatClock = setInterval(displayTime, 1000);
 
 window.addEventListener('DOMContentLoaded', () => {
     displayTime();
-    dragElement(document.getElementById('OPTIONS_WINDOW'));
+    //dragElement(document.getElementById('OPTIONS_WINDOW'));
     document.querySelector('textarea[name="bot input"]').addEventListener('keyup', event => {
         if (event.key == 'Enter') {
             addMessage();

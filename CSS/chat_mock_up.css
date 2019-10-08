@@ -1,5 +1,6 @@
-h1, h1 a {
-	background: none;
+#CHAT_BOT {
+	margin: 5rem;
+	display: none;
 }
 
 input {
@@ -138,29 +139,41 @@ textarea[name="bot input"]:focus {
 	color: #fff;
 }
 
-#OPTIONS_WINDOW {
-	position: absolute;
-	z-index: 1;
-	top: 40%;
-	left: 40%;
-	border-radius: 0.5rem;
-	background-color: #222;
-	padding: 1rem;
-	box-shadow: 0.16rem 0.32rem 0.16rem 0.16rem #000;
+#OPTIONS_WINDOW, #HELP_WINDOW {
+    position: absolute;
+    border-radius: 0.5rem;
+    background-color: #222;
+    padding: 1rem;
+    box-shadow: 0.16rem 0.32rem 0.16rem 0.16rem #000;
 	display: none;
 }
 
+#OPTIONS_WINDOW {
+    z-index: 2;
+    top: 20%;
+	bottom: 20%;
+	left: 40%;
+	right: 40%;
+}
+
+#HELP_WINDOW {
+    z-index: 3;
+    top: 15%;
+    bottom: 15%;
+    left: 25%;
+    right: 25%;
+}
+
 #CHAT_COLORS {
-	text-align: left;
-	height: 10rem;
-	width: 20rem;
-	display: none;
+    text-align: left;
+    height: 70%;
+    width: 100%;
 }
 
 #CHAT_COLORS span {
 	float: left;
 	clear: left;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 	color: aqua;
 }
 
@@ -178,7 +191,7 @@ textarea[name="bot input"]:focus {
 }
 
 #USERNAME {
-	display: none
+    margin: 1rem 0;
 }
 
 #USERNAME textarea {
@@ -188,7 +201,6 @@ textarea[name="bot input"]:focus {
 	line-height: 1rem;
 	border-radius: 0.5rem;
 	padding: 1rem;
-	margin: 2rem 0rem;
 	color: slategray;
 	font-weight: bolder;
 	overflow: hidden;
@@ -196,21 +208,12 @@ textarea[name="bot input"]:focus {
 }
 
 #HELP {
-	text-align: left;
-	width: 20rem;
-	height: 15rem;
-	overflow-y: auto;
+    text-align: left;
+    height: 85%;
+    overflow-y: auto;
+    margin-bottom: 2rem;
 }
 
 #OPTIONS_MODIFIER {
 	clear: both;
-}
-
-#DRAG_BAR {
-    height: 100%;
-    width: 100%;
-    cursor: move;
-    position: absolute;
-    z-index: -1;
-    margin: -1rem;
 }

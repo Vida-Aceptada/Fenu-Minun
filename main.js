@@ -3,6 +3,7 @@
 /* exported dragElement */
 
 const request = new XMLHttpRequest();
+let isOpen = false;
 
 function fullHeight(el) {
 	el = window.getComputedStyle(document.querySelectorAll(el)[0]);
@@ -18,7 +19,7 @@ function cssToInt(el) {
 	return parseInt(el.substring(0, el.length -2));
 }
 
-function sectionToggle(section) {
+function sectionToggle(section, scrollSpeed = 'smooth') {
 	let aboutHeight = fullHeight('h1') + fullHeight('nav') + fullHeight('#ABOUT');
 	let projectsHeight = fullHeight('#PROJECTS')
 	let totalHeight;
@@ -36,48 +37,41 @@ function sectionToggle(section) {
 	window.scroll({
 		top: totalHeight,
 		left: 0,
-		behavior: 'smooth'
+		behavior: scrollSpeed
 	});
 }
 
-/* safekeeping
-let targetEl;
-
-window.addEventListener('DOMContentLoaded', () => {
-	targetEl = document.getElementById('ABOUT'); // select the current visible pseudo page
-});
-
-function sectionToggle(section) {
-	targetEl.style.opacity = "1"; // give current pseudo page an opacity value in case it's missing
-	let el2 = document.getElementById(section); // select the new pseudo page we want to make visible
-	if (targetEl != el2) { // allow the toggle animation only if we're navigating to a different pseudo page
-		el2.style.opacity = "0"; // give new pseudo page an opacity value in case it's missing
-		let startOpacity = 1;
-		let setEl = targetEl;
-		let counter = -1;
-		let reverse = true;
-		let fade = setInterval(() => {
-			startOpacity += counter/10;
-			setEl.style.opacity = startOpacity.toString();
-			console.log(startOpacity);
-			if (reverse && startOpacity < 0) {
-				counter = 1;
-				reverse = false;
-				targetEl.style.display = 'none';
-				el2.style.display = 'block';
-				setEl = el2;
-				console.log('Complete');
-			}
-			else if (startOpacity > 1) {
-				clearInterval(fade);
-				targetEl = el2;
-			}
-		}, 30); // the speed of the fade is set here
+function projectViewer(project) {
+	let viewer = document.getElementById('VIEWER');
+	project = document.getElementById(project);
+	let startOpacity;
+	let counter;
+	if (isOpen) {
+		startOpacity = 1.0;
+		counter = -1;
+	} else {
+		startOpacity = 0;
+		counter = 1;
+		viewer.style.display = 'block';
+		project.style.display = 'block';
 	}
+	let fade = setInterval(() => {
+		startOpacity = parseFloat(Number.parseFloat(startOpacity + counter/10).toFixed(1));
+		console.log(startOpacity);
+		viewer.style.opacity = startOpacity.toString();
+		if ((!isOpen && startOpacity >= 1) || (isOpen && startOpacity <= 0)) {
+			if (isOpen) {
+				viewer.style.display = 'none';
+				project.style.display = 'none';
+			}
+			isOpen = isOpen ? false : true;
+			clearInterval(fade);
+		}
+	}, 30); // the speed of the fade is set here
 }
-*/
 
 
+/*
 function dragElement(elmnt) {
 	let pos1 = 0,
 		pos2 = 0,
@@ -119,4 +113,4 @@ function dragElement(elmnt) {
 		document.onmouseup = null;
 		document.onmousemove = null;
 	}
-}
+}*/
