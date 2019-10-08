@@ -48,12 +48,6 @@ textarea[name='song search'], textarea[name='artist search'] {
 	width: 18rem;
 }
 
-textarea[name='song search'] {
-}
-
-textarea[name='artist search'] {
-}
-
 /* Display */
 
 #SONG_FINDER {
@@ -100,3 +94,41 @@ textarea[name='artist search'] {
 	color: aqua;
 	transition: all 0.5s;
 }
+
+/* Mobile Devices */
+@media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-width: 812px) {
+	#SONG_FINDER {
+		padding: 0.5rem;
+		width: auto;
+		box-shadow: none;
+		margin: 0;
+		border-radius: 0;
+	}
+
+	textarea[name="song search"], textarea[name="artist search"] {
+		margin: 0 auto;
+		margin-right: auto;
+		margin-bottom: 0.5rem;
+		padding: 0rem 0.5rem;
+		width: 94%;
+		display: block;
+	}
+
+	#LYRICS {
+		width: auto;
+		padding-bottom: 1rem;
+		border-radius: 0;
+	}
+
+	#SONG_RESULT {
+		padding: 1rem 0;
+	}
+}
+
+@media (orientation: landscape) and (max-width: 812px) {
+	textarea[name="song search"], textarea[name="artist search"] {
+		width: 14rem;
+		display: inline-block;
+	}
+}
+
