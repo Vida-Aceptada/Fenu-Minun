@@ -59,21 +59,23 @@
 				</div>
 			</div>
 			<div id="CHAT_BOT">
-				<input type="button" name="project close" value="Close" class="project" onclick="projectViewer('CHAT_BOT');"></input>
-				<div id="CHAT_DISPLAY" class="mainBackground">
-					<div id="CHAT_TIME" class="outerBackground otherTextColor"></div>
-					<div id="MESSAGES" class="textColor">
-						<div class="botMessage">
-							Welcome! The current chatbot integration is being reworked, but you can still type in the chat and view other features.
-							<!--Welcome! Click the bottom left corner box to type into the chat and start a conversation with the chatbot. If you need more information click on the "Help" button.-->
+				<div id="CHAT">
+					<input type="button" name="project close" value="Close" class="project" onclick="projectViewer('CHAT_BOT');"></input>
+					<div id="CHAT_DISPLAY" class="mainBackground">
+						<div id="CHAT_TIME" class="outerBackground otherTextColor"></div>
+						<div id="MESSAGES" class="textColor">
+							<div class="botMessage">
+								Welcome! The current chatbot integration is being reworked, but you can still type in the chat and view other features.
+								<!--Welcome! Click the bottom left corner box to type into the chat and start a conversation with the chatbot. If you need more information click on the "Help" button.-->
+							</div>
 						</div>
 					</div>
-				</div>
-				<div id="BOT_INPUT">
-					<textarea name="bot input" class="outerBackground otherTextColor"></textarea>
-					<div id="CHAT_OPTIONS" class="outerBackground">
-						<input class="chatButton" name="options" type="button" value="Options" onclick="displayWindow('OPTIONS_WINDOW');" class="mainBackground otherTextColor">
-						<input class="chatButton" name="help" type="button" value="Help" onclick="displayWindow('HELP_WINDOW');" class="mainBackground otherTextColor">
+					<div id="BOT_INPUT">
+						<textarea name="bot input" class="outerBackground otherTextColor"></textarea>
+						<div id="CHAT_OPTIONS" class="outerBackground">
+							<input class="chatButton" name="options" type="button" value="Options" onclick="displayWindow('OPTIONS_WINDOW');" class="mainBackground otherTextColor">
+							<input class="chatButton" name="help" type="button" value="Help" onclick="displayWindow('HELP_WINDOW');" class="mainBackground otherTextColor">
+						</div>
 					</div>
 				</div>
 				<div id="OPTIONS_WINDOW">

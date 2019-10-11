@@ -1,16 +1,3 @@
-/*h1 {
-	color: #fff;
-	font-size: 3.5rem;
-	letter-spacing: 1rem;
-	background-color: #000;
-	margin: 0;
-	padding: 1.5rem 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	left: 0;
-}*/
-
 #SONG_SEARCH {
 	display: none;
 }
@@ -121,14 +108,22 @@ textarea[name='song search'], textarea[name='artist search'] {
 	}
 
 	#SONG_RESULT {
-		padding: 1rem 0;
+		padding: 0.5rem;
+	}
+
+	#LYRICS_RESULT {
+		height: 10rem;
 	}
 }
 
 @media (orientation: landscape) and (max-width: 812px) {
 	textarea[name="song search"], textarea[name="artist search"] {
-		width: 14rem;
+		width: 13rem;
 		display: inline-block;
+	}
+
+	#LYRICS_RESULT {
+		height: 5rem;
 	}
 }
 

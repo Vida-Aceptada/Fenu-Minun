@@ -10,14 +10,13 @@ input {
 /* Text Boxes */
 
 textarea[name="bot input"] {
-	width: 34rem;
 	height: 5rem;
 	resize: none;
 	border-bottom-left-radius: 0.5rem;
 	background-color: #111;
 	color: aqua;
 	font-family: 'Cousine', 'Century Gothic', monospace;
-	padding: .64rem;
+	padding: 0.5rem;
 	border: none;
 	margin: 0;
 	display: inline-block;
@@ -30,14 +29,17 @@ textarea[name="bot input"]:focus {
 
 /* Display */
 
+#CHAT {
+    width: 42rem;
+    margin: auto;
+}
+
 #CHAT_DISPLAY {
 	height: 20rem;
-	width: 41.12rem;
 	color: aqua;
 	font-family: 'Cousine', 'Century Gothic', monospace;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
-	margin: auto;
 	background-color: darkslategrey;
 	box-shadow: 0.5rem 0.5rem 0.1rem 0.1rem rgba(0,0,0,0.75);
 }
@@ -107,14 +109,15 @@ textarea[name="bot input"]:focus {
 }
 
 #BOT_INPUT {
+	display: grid;
+	grid-template-columns: 1fr 6rem;
 	font-size: 0rem;
 }
 
 #CHAT_OPTIONS {
 	background-color: #111;
-	width: 4.56rem;
 	display: inline-block;
-	padding: .64rem;
+	padding: .5rem;
 	border-left: none;
 	border-bottom-right-radius: 0.5rem;
 	height: 5rem;
@@ -130,7 +133,7 @@ textarea[name="bot input"]:focus {
 	background-color: darkslategray;
 	border: none;
 	border-radius: .32rem;
-	margin: 0rem 0rem 0.48rem 0rem;
+	margin: 0.5rem 0rem;
 }
 
 #CHAT_OPTIONS input:hover, #OPTIONS_MODIFIER input:hover {
@@ -216,4 +219,105 @@ textarea[name="bot input"]:focus {
 
 #OPTIONS_MODIFIER {
 	clear: both;
+}
+
+/* Mobile Devices */
+@media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-width: 812px) {
+	#CHAT_BOT {
+		margin: 0;
+	}
+
+	#CHAT {
+		width: 100%;
+	}
+
+	#CHAT_TIME {
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+
+	#MESSAGES div {
+		width: 80%;
+	}
+
+	textarea[name="bot input"] {
+		border-bottom-left-radius: 0;
+	}
+
+	#CHAT_OPTIONS {
+		border-bottom-right-radius: 0;
+	}
+
+	#CHAT_OPTIONS input {
+		margin: 0.5rem;
+	}
+
+	#OPTIONS_WINDOW, #HELP_WINDOW {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 0;
+		padding: 0.5rem;
+	}
+
+	#CHAT_COLORS input {
+		margin-bottom: 0rem;
+		padding: 0rem;
+		width: 4rem;
+	}
+}
+
+@media (orientation: landscape) and (max-width: 812px) {
+	#CHAT_DISPLAY {
+		height: 14rem;
+	}
+
+	#MESSAGES {
+		height: 12rem;
+	}
+
+	#MESSAGES div {
+		width: 60%;
+	}
+
+	textarea[name="bot input"] {
+		width: auto;
+	}
+
+	#CHAT_OPTIONS {
+		width: auto;
+		height: 5rem;
+		text-align: center;
+	}
+
+	#CHAT_OPTIONS input {
+		display: block;
+	}
+
+	input.project {
+		bottom: 0;
+		font-size: 1rem;
+	}
+
+	#USERNAME {
+		margin: 0.5rem 0;
+	}
+
+	#USERNAME textarea {
+		border-radius: 0.25rem;
+		padding: 0.5rem;
+	}
+
+	#CHAT_COLORS span {
+		margin-bottom: 0.5rem;
+	}
+
+	#CHAT_COLORS input {
+		margin-bottom: 0rem;
+	}
+
+	#HELP {
+		margin-bottom: 0;
+	}
 }

@@ -264,18 +264,25 @@ input.project:hover {
 		margin: 0;
 	}
 
-	#PROJECTS article a {
-		margin: 1rem auto;
-	}
-
-	#PROJECTS a:last-child {
-		display: none;
-	}
 
 	#PROJECTS article {
 		grid-template:
 			"a"
 			"b";
+	}
+
+	#PROJECTS article a {
+		margin: 1rem auto;
+		width: 14rem;
+		height: 14rem;
+	}
+
+	article h3 img {
+		margin: 2rem auto;
+	}
+
+	#PROJECTS a:last-child {
+		display: none;
 	}
 
 	input.project {
@@ -290,7 +297,7 @@ input.project:hover {
 	nav > ul > li {
 		margin: 0;
 		width: auto;
-		padding: 1rem 3rem;
+		padding: 1rem 2rem;
 	}
 
 	nav > ul > li:first-child {
