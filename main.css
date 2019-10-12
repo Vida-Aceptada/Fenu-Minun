@@ -158,7 +158,7 @@ footer {
 }
 
 /* Buttons */
-article a {
+#PROJECTS article a {
     padding: 0rem;
     margin: auto;
     background-color: rgba(0,0,0,0.75);
@@ -169,19 +169,19 @@ article a {
     height: 16rem;
 }
 
-article a:hover {
+#PROJECTS article a:hover {
 	background-color: rgba(0, 255, 255,0.75);
 	transition-duration: 0.5s;
 }
 
-article h3 img {
+#PROJECTS article h3 img {
     display: block;
     margin: 2rem auto 3rem auto;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
 }
 
-article a h3 {
+#PROJECTS article a h3 {
 	color: #fff;
 	padding: 0rem;
 	margin: 0rem;
