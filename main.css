@@ -102,7 +102,10 @@ div article {
 	text-align: left;
 }
 
-#ABOUT, #CONTACT {
+#ABOUT {
+	margin-top: 0;
+}
+#CONTACT {
 	margin-top: 5rem;
 }
 
