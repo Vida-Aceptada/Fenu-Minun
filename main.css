@@ -105,6 +105,7 @@ div article {
 #ABOUT {
 	margin-top: 0;
 }
+
 #CONTACT {
 	margin-top: 5rem;
 }
@@ -173,7 +174,7 @@ footer {
 }
 
 #PROJECTS article a:hover {
-	background-color: rgba(0, 255, 255,0.75);
+	background-color: rgba(0, 255, 255,0.5);
 	transition-duration: 0.5s;
 }
 
