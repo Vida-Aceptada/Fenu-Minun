@@ -19,7 +19,7 @@ function cssToInt(el) {
 	return parseInt(el.substring(0, el.length -2));
 }
 
-function sectionToggle(section, scrollSpeed = 'smooth') {
+function sectionToggle(section) {
 	let aboutHeight = fullHeight('h1') + fullHeight('nav') + fullHeight('#ABOUT');
 	let projectsHeight = fullHeight('#PROJECTS')
 	let totalHeight;
@@ -34,11 +34,7 @@ function sectionToggle(section, scrollSpeed = 'smooth') {
 			totalHeight = 0;
 			break;
 	}
-	window.scroll({
-		top: totalHeight,
-		left: 0,
-		behavior: scrollSpeed
-	});
+	scrollbar['scroll'](totalHeight);
 	scrollbar['scroll cords'] = totalHeight;
 }
 
