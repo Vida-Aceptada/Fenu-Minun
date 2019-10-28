@@ -39,29 +39,41 @@ function sectionToggle(section, scrollSpeed = 'smooth') {
 		left: 0,
 		behavior: scrollSpeed
 	});
+	scrollbar['scroll cords'] = totalHeight;
 }
 
 function projectViewer(project) {
 	let viewer = document.getElementById('VIEWER');
 	project = document.getElementById(project);
+	let scrollElement = document.getElementById('SCROLLBAR');
 	let startOpacity;
+	let secondOpacity;
 	let counter;
 	if (isOpen) {
 		startOpacity = 1.0;
+		secondOpacity = 0;
 		counter = -1;
+		scrollElement.style.display = 'block';
 	} else {
 		startOpacity = 0;
+		secondOpacity = 1.0;
 		counter = 1;
 		viewer.style.display = 'block';
 		project.style.display = 'block';
+		scrollbar['switch on'] = false;
 	}
 	let fade = setInterval(() => {
 		startOpacity = parseFloat(Number.parseFloat(startOpacity + counter/10).toFixed(1));
+		secondOpacity = parseFloat(Number.parseFloat(secondOpacity + (counter * -1)/10).toFixed(1));
 		viewer.style.opacity = startOpacity.toString();
+		scrollElement.style.opacity = secondOpacity.toString()
 		if ((!isOpen && startOpacity >= 1) || (isOpen && startOpacity <= 0)) {
 			if (isOpen) {
 				viewer.style.display = 'none';
 				project.style.display = 'none';
+				scrollbar['switch on'] = true;
+			} else {
+				scrollElement.style.display = 'none';
 			}
 			isOpen = isOpen ? false : true;
 			clearInterval(fade);

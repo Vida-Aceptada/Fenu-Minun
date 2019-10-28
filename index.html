@@ -5,10 +5,12 @@
 		<link href="CSS/song_finder.css" rel="stylesheet">
 		<link href="CSS/chat_mock_up.css" rel="stylesheet">
 		<link href="CSS/capricorn_decka.css" rel="stylesheet">
+		<link href="CSS/scrollbar.css" rel="stylesheet">
 		<script src="main.js"></script>
 		<script src="JS/song_finder.js"></script>
 		<script src="JS/chat_mock_up.js"></script>
 		<script src="JS/capricorn_decka.js"></script>
+		<script src="JS/scrollbar.js"></script>
 		<meta charset='UTF-8'>
 		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
 		<link rel="icon" href="Images/favicon.ico">
@@ -130,6 +132,16 @@
 				<input type="button" name="project close" value="Close" class="project" onclick="projectViewer('CAPRICORN_DECKA');"></input>
 				<canvas id="GAME" width="800" height="640"></canvas>
 			</div>
+		</div>
+		<div id="SCROLLBAR">
+			<div id="SCROLL_TOP" onclick="scrollbar['scroll'](scrollbar['scroll limit']() * -1);">·</div>
+			<div id="SCROLL_UP"></div>
+			<div id="SCROLL_LIMIT_UPPER"></div>
+			<div id="SCROLL_LIMIT"></div>
+			<div id="SCROLL_LIMIT_LOWER"></div>
+			<div id="SCROLL_AREA"></div>
+			<div id="SCROLL_DOWN"></div>
+			<div id="SCROLL_BOTTOM" onclick="scrollbar['scroll'](scrollbar['scroll limit']());">·</div>
 		</div>
 		<footer role="contentinfo">
 			© 2019 Fenu Minun. All rights reserved.
