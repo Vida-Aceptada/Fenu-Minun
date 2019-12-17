@@ -21,7 +21,7 @@ function cssToInt(el) {
 
 function sectionToggle(section) {
 	let aboutHeight = fullHeight('h1') + fullHeight('nav') + fullHeight('#ABOUT');
-	let projectsHeight = fullHeight('#PROJECTS')
+	let projectsHeight = fullHeight('#PROJECTS');
 	let totalHeight;
 	switch(section) {
 		case 'PROJECTS':
